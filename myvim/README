@@ -1,0 +1,52 @@
+/*
+* Filename: README
+* Last modified: 2012-07-28 17:29
+* Author: Qixue Xiao <xiaoqixue_1@163.com>  copy form Chen Jiang
+* Description: 简单又实用的vim配置
+*/
+这是一个简单又实用的vim配置,满足programmer的日常需求。
+依赖:
+vim 7.0+
+步骤:
+Linux:
+直接执行install.sh脚本
+sh install.sh
+
+Windows:
+下载好myvim.zip压缩包，解压，将myvim文件夹的所有文件复制合并到
+你的vim安装目录下的vim7x文件夹内，并将_vimrc替换vim目录下原有的。
+再将ctags.exe复制到c:/windows/system32/下。
+
+
+常用用法:
+F5 一键编译单源文件(支持java,c++)
+F6 一键运行(支持java,c++,python)
+F12 .h .cpp/.c 快速切换
+TAB 超级补全
+wm 正常模式下按wm调出资源管理与类管理
+fuckc 正常模式按下在文首自动注释cpp格式
+fucks 正常模式按下在文首自动注释bash格式
+fuckp 正常模式按下在文首自动注释python格式
+空格 语法折叠开关
+ctrl + [h,j,k,l] 切换窗口
+ctags -R 
+set tags=tags
+`` 跳转到上次光标位置
+[[,]],｛，｝块代码跳转
+ctrl+],ctrl+t 代码定义跳转
+% 括号匹配(同时支持html标签匹配)
+ctrl+v 神奇列模式
+,cc 自动注释（反注释,c<space>)
+xml元素自动闭合标签
+zencoding用法：
+html:5  ctrl+y+,
+div#a>#div.b ctrl+y,ython 语法错误检测
+
+改进：
+可以识别windows/linux系统选择不同编码
+可以显示代码缩进线(仅限tab缩进)
+可以打开gb编码文件
+底部状态栏可以显示编码类型
+复制外部代码进vim,取消自动注释与缩进set noautoindent, set nocindent, set fo-=r
+"+p, "+y 系统剪贴板
+sudo vim与neocomplcache.vim冲突解决方案(例子)：vim sudo:/etc/apt/sources.list
